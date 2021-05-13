@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/item_board_content_marginBottom">
+
+    <!-- This LinearLayout puts things beside each other !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/item_board_content_padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_user_image"
+            android:layout_width="@dimen/item_board_image_size"
+            android:layout_height="@dimen/item_board_image_size"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_workout_place_holder"
+            app:civ_border_color="@color/primaryTextColor"
+            app:civ_border_width="@dimen/item_board_image_circular_border_width">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/item_board_name_layout_marginStart"
+            android:orientation="vertical"
+            tools:ignore="RtlCompat">
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/item_board_name_text_size"
+                tools:text="Name" />
+
+            <TextView
+                android:id="@+id/tv_created_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/item_board_created_by_text_size"
+                tools:text="Created By:" />
+
+           <LinearLayout
+                android:id="@+id/ll_user_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|right"
+                android:orientation="horizontal"
+                tools:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/lyt_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|right">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_check_box"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_check_24"/>
+
+
+                </RelativeLayout>
+
+                <!--
+                <TextView
+                    android:id="@+id/btn_select_user"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/add_to_workout_button"
+                    android:gravity="center_vertical"
+                    android:text="Select User"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" /> <!-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_board_divider_height"
+        android:layout_marginTop="@dimen/item_board_divider_marginTop"
+        android:background="@color/divider_color" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/action_select_all"
+        android:icon="@drawable/select_all"
+        android:title="Select All"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/action_select_users"
+        android:icon="@drawable/assign_users"
+        android:title="Assign Users"
+        app:showAsAction="always"/>
+
+
+    <!--<TextView
+        android:id="@+id/btn_select_user"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/add_to_workout_button"
+        android:gravity="center_vertical"
+        android:text="Select User"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" /> !-->
+
+</menu>
